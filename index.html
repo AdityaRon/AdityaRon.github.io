@@ -79,6 +79,7 @@
   .card .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
     color:var(--accent);border:1px solid var(--line);border-radius:5px;padding:2px 7px}
   .card p{color:#39454F;font-size:14.8px;margin:0}
+  .card.span2{grid-column:1 / -1;background:linear-gradient(180deg,#fff,#FBFCFD)}
   .stat{font-family:var(--mono);font-weight:600;color:var(--accent)}
 
   /* experience */
@@ -168,7 +169,7 @@
     <div class="wrap">
       <p class="sec-eyebrow">Selected Work</p>
       <h2>What I've built</h2>
-      <p class="lead">A few of the things I've led at Fortinet / Lacework. Numbers are real and measured; details are kept portable.</p>
+      <p class="lead">A few of the things I've led at Fortinet / Lacework — plus the decade of production ML before it. Numbers are real and measured; details are kept portable.</p>
       <div class="grid cols-2">
         <div class="card">
           <h3>AI Assist <span class="k">LLM · RAG</span></h3>
@@ -185,6 +186,10 @@
         <div class="card">
           <h3>LLMOps &amp; AI security <span class="k">Eval · Red-team</span></h3>
           <p>Built the practice that keeps GenAI trustworthy: an LLM-as-judge evaluation harness on every prompt change, adversarial red-teaming (<span class="stat">5,000+</span> prompts, zero bypasses), production SLOs, and per-request cost/latency observability — plus AI-threat detection policies and a reusable AI platform service other teams build on.</p>
+        </div>
+        <div class="card span2">
+          <h3>Before that — a decade of production ML &amp; data science <span class="k">HPE · Salesforce</span></h3>
+          <p>At <a href="https://www.hpe.com/us/en/solutions/infosight.html">HPE InfoSight</a> (HPE's AIOps platform): workload anomaly detection, a recommendation engine that auto-resolved <span class="stat">86%</span> of customer cases, cross-stack analytics across host / storage / network, and capacity forecasting &amp; sizing. At Salesforce / Tableau: subscription-churn forecasting (<span class="stat">−1.5%</span> churn) and NLP for product ideas, plus data pipelines for the <a href="https://www.tableau.com/blog/how-data-equity-hub-helps-organizations-use-data-fight-justice-and-equity">Tableau Data Equity Hub</a>.</p>
         </div>
       </div>
     </div>
