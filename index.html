@@ -172,19 +172,19 @@
       <div class="grid cols-2">
         <div class="card">
           <h3>AI Assist <span class="k">LLM · RAG</span></h3>
-          <p>Founded an LLM + RAG system that reads a complex cloud-security alert and produces a prioritized incident report and an alert-grounded remediation plan. Set the roadmap at launch and shipped every milestone — through to an alert-context API that plugs into customers' own agentic / MCP workflows. Drove a <span class="stat">~30%</span> lift in engagement.</p>
+          <p>Founded an LLM + RAG system (built on Claude via Amazon Bedrock) that reads a complex FortiCNAPP alert and produces a prioritized incident report and an alert-grounded remediation plan. Set the roadmap at launch and shipped every milestone — through to an alert-context API that plugs into customers' own agentic / MCP workflows. Drove a <span class="stat">30%</span> lift in analyst engagement. <a href="https://community.fortinet.com/t5/Blogs/FortiCNAPP-AI-Assist-Accelerating-the-Investigation-and/ba-p/437144">Read the blog&nbsp;→</a></p>
         </div>
         <div class="card">
           <h3>Composite Alerts engine <span class="k">Graph · ML</span></h3>
-          <p>Founding engineer and primary architect of the correlation engine that fuses <span class="stat">~400</span> detections across <span class="stat">~142</span> MITRE ATT&amp;CK techniques and cloud, host, container, and ML-anomaly signals into single high-fidelity incidents — cutting false positives <span class="stat">~40%</span>.</p>
+          <p>Founding engineer and primary architect of the correlation engine: entity resolution collapses signals into canonical entities, then an <b>ephemeral Neo4j graph</b> correlates <span class="stat">400+</span> detections across <span class="stat">140+</span> MITRE ATT&amp;CK techniques — cloud, host, container, ML-anomaly, small-language-model command detection, and runtime vulnerable-activity (RiskWatch) signals — into single high-fidelity incidents, cutting false positives <span class="stat">40%</span>.</p>
         </div>
         <div class="card">
           <h3>Lakehouse migration <span class="k">Spark · Iceberg</span></h3>
-          <p>Led the migration of the detection/incident pipeline off a proprietary warehouse onto an open Spark + Apache Iceberg lakehouse, re-architecting a monolith into independently scalable services — saving <span class="stat">~$1.5M</span> in annualized cloud cost.</p>
+          <p>Designed and led the migration of the detection/incident pipeline off a proprietary warehouse onto an open Spark + Apache Iceberg lakehouse, re-architecting a monolith into independently scalable producer/consumer services — saving <span class="stat">$1.5M+</span> in annualized cloud cost.</p>
         </div>
         <div class="card">
           <h3>LLMOps &amp; AI security <span class="k">Eval · Red-team</span></h3>
-          <p>Built the practice that keeps GenAI trustworthy: an LLM-as-judge evaluation harness on every prompt change, adversarial red-teaming, production SLOs, and per-request cost/latency observability — plus AI-threat detection policies and a reusable AI platform service other teams build on.</p>
+          <p>Built the practice that keeps GenAI trustworthy: an LLM-as-judge evaluation harness on every prompt change, adversarial red-teaming (<span class="stat">5,000+</span> prompts, zero bypasses), production SLOs, and per-request cost/latency observability — plus AI-threat detection policies and a reusable AI platform service other teams build on.</p>
         </div>
       </div>
     </div>
@@ -199,7 +199,7 @@
       <div class="case">
         <p class="tagline">Re-platforming a security correlation engine</p>
         <h3>From a warehouse-coupled monolith to an open lakehouse — by design</h3>
-        <p class="ctx">A correlation engine I help found and architect runs ~400 detections an hour, fusing them into high-fidelity incidents. It was coupled to a proprietary data warehouse — costly, and hard to scale the ingest and analysis stages independently. I wrote the migration design before we touched code.</p>
+        <p class="ctx">A correlation engine I help found and architect runs 400+ detections an hour — resolving entities and correlating them in an ephemeral Neo4j graph into high-fidelity incidents. It was coupled to a proprietary data warehouse — costly, and hard to scale the ingest and analysis stages independently. I wrote the migration design before we touched code.</p>
         <div class="phases">
           <div class="phase">
             <p class="pl">◆ The design I authored</p>
@@ -219,7 +219,7 @@
           </div>
         </div>
         <div class="outcome">
-          <div class="ometric"><div class="n">~$1.5M</div><div class="l">annualized cloud savings</div></div>
+          <div class="ometric"><div class="n">$1.5M+</div><div class="l">annualized cloud savings</div></div>
           <div class="ometric"><div class="n">−53% / −57%</div><div class="l">warehouse / compute</div></div>
           <div class="ometric"><div class="n">independent</div><div class="l">scaling + faster cadence</div></div>
         </div>
@@ -228,7 +228,7 @@
       <div class="case">
         <p class="tagline">Founding an LLM product line</p>
         <h3>A roadmap set at launch — and every milestone shipped</h3>
-        <p class="ctx">Analysts were drowning in dense alerts. I founded AI Assist, an LLM + RAG system built on Claude, and laid out a year-long roadmap on day one — then delivered all of it.</p>
+        <p class="ctx">Analysts were drowning in dense alerts. I founded AI Assist, an LLM + RAG system built on Claude, and laid out a year-long roadmap on day one — then delivered all of it. <a href="https://community.fortinet.com/t5/Blogs/FortiCNAPP-AI-Assist-Accelerating-the-Investigation-and/ba-p/437144">I wrote about it here&nbsp;→</a></p>
         <div class="phases">
           <div class="phase">
             <p class="pl">◆ The vision I set</p>
@@ -240,13 +240,13 @@
           <div class="phase shipped">
             <p class="pl">▲ What shipped</p>
             <ul>
-              <li>Every milestone, in sequence, over ~12 months — through dedicated AI Incident Report &amp; Remediation tabs and the agentic API.</li>
+              <li>Every milestone, in sequence, over 12 months — through dedicated AI Incident Report &amp; Remediation tabs and the agentic API.</li>
               <li>An LLM-as-judge eval harness on every prompt change, adversarial red-teaming, and production SLOs; adopted by a second product team with zero new infrastructure.</li>
             </ul>
           </div>
         </div>
         <div class="outcome">
-          <div class="ometric"><div class="n">~30%</div><div class="l">higher engagement</div></div>
+          <div class="ometric"><div class="n">30%</div><div class="l">higher analyst engagement</div></div>
           <div class="ometric"><div class="n">0</div><div class="l">red-team bypasses (5,000+ prompts)</div></div>
           <div class="ometric"><div class="n">2nd team</div><div class="l">reuses it, no new infra</div></div>
         </div>
@@ -272,7 +272,7 @@
           <div>
             <div class="xp-role">Senior Data Scientist</div>
             <div class="xp-co">Salesforce (Tableau)</div>
-            <p>Subscription-renewal churn forecasting (−1.5% churn), NLP topic modeling for product ideas, SHAP-based viz-performance models, census-data pipelines for the Data Equity Hub.</p>
+            <p>Subscription-renewal churn forecasting (−1.5% churn), NLP topic modeling for product ideas, SHAP-based viz-performance models, and census-data pipelines for the <a href="https://www.tableau.com/blog/how-data-equity-hub-helps-organizations-use-data-fight-justice-and-equity">Tableau Data Equity Hub</a>.</p>
           </div>
         </div>
         <div class="xp-item">
@@ -280,7 +280,7 @@
           <div>
             <div class="xp-role">Senior Staff Data Scientist</div>
             <div class="xp-co">Hewlett Packard Enterprise</div>
-            <p>Workload anomaly detection, a recommendation engine that auto-resolved 86% of customer cases, and forecasting/sizing models driving revenue and sales efficiency.</p>
+            <p>Built ML for <a href="https://www.hpe.com/us/en/solutions/infosight.html">HPE InfoSight</a> (HPE's AIOps platform) — workload anomaly detection, a recommendation engine that auto-resolved 86% of customer cases, cross-stack analytics for virtual environments, and Resource Planner capacity forecasting/sizing.</p>
           </div>
         </div>
         <div class="xp-item">
@@ -288,7 +288,7 @@
           <div>
             <div class="xp-role">Data Scientist</div>
             <div class="xp-co">Nimble Storage</div>
-            <p>Predictive models for storage issues, executive dashboards, and Flask APIs — improving support satisfaction 12.5%.</p>
+            <p>Predictive models for storage issues — early work in the Nimble lineage that became HPE InfoSight — plus executive dashboards and Flask APIs, improving support satisfaction 12.5%.</p>
           </div>
         </div>
       </div>
@@ -318,7 +318,7 @@
       <ul class="clean">
         <li><strong>Patent (Allowed, USPTO):</strong> Generative AI-Based Multi-stage Composite Event Processing — co-inventor.</li>
         <li><strong>Patent (Granted):</strong> US 9,065,952 B2 — determining the significance of performance issues in IT environments. <strong>Patent (Pending):</strong> ML-based detection of compromised cloud credentials.</li>
-        <li><strong>Writing:</strong> "FortiCNAPP AI Assist: Accelerating the Investigation and Remediation of Cloud Threats" (Fortinet Community blog).</li>
+        <li><strong>Writing:</strong> <a href="https://community.fortinet.com/t5/Blogs/FortiCNAPP-AI-Assist-Accelerating-the-Investigation-and/ba-p/437144">"FortiCNAPP AI Assist: Accelerating the Investigation and Remediation of Cloud Threats"</a> — authored, Fortinet Community.</li>
         <li><strong>Education:</strong> MS in Analytics, Arizona State University (GPA 4.0, Beta Gamma Sigma); BTech in Electronics &amp; Communication Engineering, JNTU.</li>
       </ul>
     </div>
