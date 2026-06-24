@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditya Samalla — Engineering Manager & Principal ML Engineer</title>
+<meta name="description" content="Aditya Samalla — Engineering Manager and Principal ML Engineer building AI for cloud security: LLMs, RAG, agentic systems, and ML at scale.">
+<style>
+  :root{
+    --ground:#0E1726;        /* deep ink-navy */
+    --ground-2:#0B1320;
+    --paper:#F7F8FA;
+    --card:#FFFFFF;
+    --ink:#15212E;
+    --muted:#5A6675;
+    --faint:#8A94A2;
+    --line:#E4E8ED;
+    --accent:#1E6E8C;        /* signal teal-blue */
+    --accent-2:#2FB3A6;      /* graph teal */
+    --amber:#D98A28;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono","SFMono-Regular",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:3px}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{text-wrap:balance}
+
+  /* sticky nav */
+  .topnav{position:sticky;top:0;z-index:20;background:rgba(14,23,38,.92);
+    backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .navwrap{display:flex;align-items:center;justify-content:space-between;height:52px}
+  .navname{font-family:var(--serif);font-weight:700;color:#fff;font-size:17px;letter-spacing:.01em}
+  .navlinks{display:flex;gap:22px}
+  .navlinks a{color:#B7C5D4;font-size:13.5px;border-bottom:none}
+  .navlinks a:hover{color:#fff;text-decoration:none}
+  @media(max-width:620px){.navlinks{gap:14px;font-size:12.5px}.navlinks a{font-size:12.5px}.navname{display:none}}
+
+  /* hero */
+  .hero{background:
+      radial-gradient(110% 120% at 80% 0%, rgba(47,179,166,.16), transparent 55%),
+      radial-gradient(90% 100% at 10% 20%, rgba(30,110,140,.18), transparent 60%),
+      linear-gradient(180deg,var(--ground),var(--ground-2));
+    color:#EAF0F6;padding:84px 0 72px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent-2);margin:0 0 16px}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,6vw,58px);line-height:1.03;
+    letter-spacing:-.015em;margin:0 0 14px}
+  .hero .tag{font-size:clamp(17px,2.4vw,21px);color:#C2CEDB;max-width:60ch;margin:0 0 26px}
+  .hero .tag b{color:#fff;font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;
+    padding:10px 18px;border-radius:8px;border:1px solid rgba(255,255,255,.22);color:#EAF0F6}
+  .btn:hover{text-decoration:none;border-color:var(--accent-2);color:#fff}
+  .btn.primary{background:var(--accent-2);color:#06231f;border-color:var(--accent-2)}
+  .btn.primary:hover{background:#3ac8ba;color:#06231f}
+
+  section{padding:60px 0;border-top:1px solid var(--line)}
+  section h2{font-family:var(--serif);font-size:clamp(24px,3.6vw,32px);margin:0 0 8px;letter-spacing:-.01em}
+  section .lead{color:var(--muted);max-width:66ch;margin:0 0 28px;font-size:16.5px}
+  .sec-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 8px}
+
+  p{margin:0 0 14px}
+  .about p{max-width:68ch;font-size:17px;color:#2A3744}
+
+  /* work cards */
+  .grid{display:grid;gap:18px}
+  @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;
+    box-shadow:0 1px 2px rgba(16,30,50,.04)}
+  .card h3{font-size:18px;margin:0 0 6px;color:var(--ink);display:flex;align-items:center;gap:9px}
+  .card .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--line);border-radius:5px;padding:2px 7px}
+  .card p{color:#39454F;font-size:14.8px;margin:0}
+  .stat{font-family:var(--mono);font-weight:600;color:var(--accent)}
+
+  /* experience */
+  .xp{display:flex;flex-direction:column;gap:0}
+  .xp-item{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+  .xp-item:first-child{border-top:none}
+  .xp-when{font-family:var(--mono);font-size:12.5px;color:var(--faint);padding-top:2px}
+  .xp-role{font-weight:700;color:var(--ink)}
+  .xp-co{color:var(--accent);font-weight:600}
+  .xp-item p{color:var(--muted);font-size:14.5px;margin:6px 0 0}
+  @media(max-width:560px){.xp-item{grid-template-columns:1fr;gap:4px}}
+
+  /* skills + recognition */
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{font-size:13.5px;background:#EDF1F4;color:#2A3744;border:1px solid var(--line);
+    border-radius:20px;padding:5px 13px}
+  ul.clean{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  ul.clean li{position:relative;padding-left:20px;color:#39454F;font-size:15px}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;
+    border-radius:50%;background:var(--accent-2)}
+
+  footer{background:var(--ground);color:#C2CEDB;padding:54px 0 64px}
+  footer h2{font-family:var(--serif);color:#fff;font-size:26px;margin:0 0 10px}
+  footer a{color:var(--accent-2)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font-size:15px}
+  .small{font-size:12.5px;color:#7E8B99;margin-top:28px;font-family:var(--mono)}
+
+  /* case studies */
+  .case{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:18px 0;
+    box-shadow:0 1px 2px rgba(16,30,50,.04)}
+  .case .ctx{color:var(--muted);font-size:14.5px;margin:0 0 16px;max-width:72ch}
+  .case h3{font-size:19px;margin:0 0 4px;color:var(--ink)}
+  .case .tagline{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+  .phases{display:grid;gap:16px}
+  @media(min-width:720px){.phases{grid-template-columns:1fr 1fr}}
+  .phase{background:#F9FAFB;border:1px solid var(--line);border-radius:11px;padding:16px}
+  .phase .pl{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin:0 0 8px;display:flex;align-items:center;gap:8px}
+  .phase.shipped .pl{color:var(--accent)}
+  .phase ul{margin:0;padding-left:17px;display:flex;flex-direction:column;gap:6px}
+  .phase li{font-size:14px;color:#39454F}
+  .outcome{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+  .ometric{background:var(--ground);color:#EAF0F6;border-radius:9px;padding:9px 14px;min-width:120px}
+  .ometric .n{font-family:var(--mono);font-weight:600;font-size:18px;color:var(--accent-2)}
+  .ometric .l{font-size:11px;color:#9FB0C0;margin-top:2px}
+
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap navwrap">
+    <span class="navname">Aditya Samalla</span>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#design">Design&nbsp;→&nbsp;Outcome</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Engineering Manager · Principal ML Engineer</p>
+    <h1>Aditya Samalla</h1>
+    <p class="tag">I build and lead AI systems that turn overwhelming security signal into clear, actionable answers — <b>LLMs, RAG, agentic systems, and ML at production scale.</b></p>
+    <div class="cta">
+      <a class="btn primary" href="Aditya_Samalla_Resume_2026.pdf">Résumé (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/adityasamalla">LinkedIn</a>
+      <a class="btn" href="mailto:aditya.samalla@asu.edu">Email</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="about">
+    <div class="wrap">
+      <p class="sec-eyebrow">About</p>
+      <h2>Production AI for cloud security — founded, architected, and shipped.</h2>
+      <p>I'm a Software Engineering Manager and Principal ML Engineer at Fortinet (FortiCNAPP), leading a team across detection, generative AI, and data platform. I founded the product's AI Assist line, helped found and architect the engine that correlates hundreds of detections into single high-fidelity incidents, and led its migration onto an open lakehouse. I care about systems that are not just smart but trustworthy and cheap to run at scale — and about turning model performance into measurable business outcomes.</p>
+      <p>Before this I was a Senior Data Scientist at Salesforce and a Senior Staff Data Scientist at HPE. I hold an MS in Analytics from Arizona State (GPA 4.0, Beta Gamma Sigma), a granted patent, an allowed patent on generative-AI event processing, and a patent pending.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="sec-eyebrow">Selected Work</p>
+      <h2>What I've built</h2>
+      <p class="lead">A few of the things I've led at Fortinet / Lacework. Numbers are real and measured; details are kept portable.</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>AI Assist <span class="k">LLM · RAG</span></h3>
+          <p>Founded an LLM + RAG system that reads a complex cloud-security alert and produces a prioritized incident report and an alert-grounded remediation plan. Set the roadmap at launch and shipped every milestone — through to an alert-context API that plugs into customers' own agentic / MCP workflows. Drove a <span class="stat">~30%</span> lift in engagement.</p>
+        </div>
+        <div class="card">
+          <h3>Composite Alerts engine <span class="k">Graph · ML</span></h3>
+          <p>Founding engineer and primary architect of the correlation engine that fuses <span class="stat">~400</span> detections across <span class="stat">~142</span> MITRE ATT&amp;CK techniques and cloud, host, container, and ML-anomaly signals into single high-fidelity incidents — cutting false positives <span class="stat">~40%</span>.</p>
+        </div>
+        <div class="card">
+          <h3>Lakehouse migration <span class="k">Spark · Iceberg</span></h3>
+          <p>Led the migration of the detection/incident pipeline off a proprietary warehouse onto an open Spark + Apache Iceberg lakehouse, re-architecting a monolith into independently scalable services — saving <span class="stat">~$1.5M</span> in annualized cloud cost.</p>
+        </div>
+        <div class="card">
+          <h3>LLMOps &amp; AI security <span class="k">Eval · Red-team</span></h3>
+          <p>Built the practice that keeps GenAI trustworthy: an LLM-as-judge evaluation harness on every prompt change, adversarial red-teaming, production SLOs, and per-request cost/latency observability — plus AI-threat detection policies and a reusable AI platform service other teams build on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="wrap">
+      <p class="sec-eyebrow">Design → Outcome</p>
+      <h2>How I work — design first, then ship it.</h2>
+      <p class="lead">Two efforts where I wrote the design up front and drove it to production. The point isn't just the result — it's that the architecture I proposed is the one that shipped.</p>
+
+      <div class="case">
+        <p class="tagline">Re-platforming a security correlation engine</p>
+        <h3>From a warehouse-coupled monolith to an open lakehouse — by design</h3>
+        <p class="ctx">A correlation engine I help found and architect runs ~400 detections an hour, fusing them into high-fidelity incidents. It was coupled to a proprietary data warehouse — costly, and hard to scale the ingest and analysis stages independently. I wrote the migration design before we touched code.</p>
+        <div class="phases">
+          <div class="phase">
+            <p class="pl">◆ The design I authored</p>
+            <ul>
+              <li>Split the monolith into a <b>producer</b> (pre-aggregates detection "edges" into an open Iceberg lakehouse) and a <b>consumer</b> (graph analysis → alerts) — so each scales independently.</li>
+              <li><b>Single-scan grouped caching</b>: read each source once, derive every policy off the cached base, union, write once — collapsing 155 repeated scans of one table into one.</li>
+              <li>Per-pipeline triggering, managed reference-data tables, and metrics parity carried over from the legacy system.</li>
+            </ul>
+          </div>
+          <div class="phase shipped">
+            <p class="pl">▲ What shipped</p>
+            <ul>
+              <li>The producer/consumer split landed in production, validated end-to-end on real tenants.</li>
+              <li>The single-scan strategy shipped as a one-pass query rewrite across <b>92 detection policies</b>, byte-for-byte identical output.</li>
+              <li>Reference data moved to managed lakehouse tables; observability and alerting reached parity.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outcome">
+          <div class="ometric"><div class="n">~$1.5M</div><div class="l">annualized cloud savings</div></div>
+          <div class="ometric"><div class="n">−53% / −57%</div><div class="l">warehouse / compute</div></div>
+          <div class="ometric"><div class="n">independent</div><div class="l">scaling + faster cadence</div></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <p class="tagline">Founding an LLM product line</p>
+        <h3>A roadmap set at launch — and every milestone shipped</h3>
+        <p class="ctx">Analysts were drowning in dense alerts. I founded AI Assist, an LLM + RAG system built on Claude, and laid out a year-long roadmap on day one — then delivered all of it.</p>
+        <div class="phases">
+          <div class="phase">
+            <p class="pl">◆ The vision I set</p>
+            <ul>
+              <li>Natural-language querying of an alert → structured, prioritized summaries → grounded remediation → an alert-context API for agentic / MCP workflows.</li>
+              <li>Built on a reusable platform service, gated by evaluation and red-teaming so it stays trustworthy.</li>
+            </ul>
+          </div>
+          <div class="phase shipped">
+            <p class="pl">▲ What shipped</p>
+            <ul>
+              <li>Every milestone, in sequence, over ~12 months — through dedicated AI Incident Report &amp; Remediation tabs and the agentic API.</li>
+              <li>An LLM-as-judge eval harness on every prompt change, adversarial red-teaming, and production SLOs; adopted by a second product team with zero new infrastructure.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outcome">
+          <div class="ometric"><div class="n">~30%</div><div class="l">higher engagement</div></div>
+          <div class="ometric"><div class="n">0</div><div class="l">red-team bypasses (5,000+ prompts)</div></div>
+          <div class="ometric"><div class="n">2nd team</div><div class="l">reuses it, no new infra</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <p class="sec-eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+      <div class="xp">
+        <div class="xp-item">
+          <div class="xp-when">2022 — Present</div>
+          <div>
+            <div class="xp-role">Software Engineering Manager / Principal ML Engineer</div>
+            <div class="xp-co">Fortinet (formerly Lacework) &nbsp;·&nbsp; <span style="color:var(--faint);font-weight:400;font-size:13px">promoted 3 levels, Senior → Staff → SEM / Principal</span></div>
+            <p>Lead a team across detection, GenAI, and platform. Founded AI Assist; founding engineer and architect of the Composite Alerts engine; designed and led the lakehouse migration; own the cross-team delivery roadmap.</p>
+          </div>
+        </div>
+        <div class="xp-item">
+          <div class="xp-when">2021 — 2022</div>
+          <div>
+            <div class="xp-role">Senior Data Scientist</div>
+            <div class="xp-co">Salesforce (Tableau)</div>
+            <p>Subscription-renewal churn forecasting (−1.5% churn), NLP topic modeling for product ideas, SHAP-based viz-performance models, census-data pipelines for the Data Equity Hub.</p>
+          </div>
+        </div>
+        <div class="xp-item">
+          <div class="xp-when">2017 — 2021</div>
+          <div>
+            <div class="xp-role">Senior Staff Data Scientist</div>
+            <div class="xp-co">Hewlett Packard Enterprise</div>
+            <p>Workload anomaly detection, a recommendation engine that auto-resolved 86% of customer cases, and forecasting/sizing models driving revenue and sales efficiency.</p>
+          </div>
+        </div>
+        <div class="xp-item">
+          <div class="xp-when">2016 — 2017</div>
+          <div>
+            <div class="xp-role">Data Scientist</div>
+            <div class="xp-co">Nimble Storage</div>
+            <p>Predictive models for storage issues, executive dashboards, and Flask APIs — improving support satisfaction 12.5%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="sec-eyebrow">Toolkit</p>
+      <h2>How I build</h2>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">Spark</span><span class="chip">SQL</span>
+        <span class="chip">Scala</span><span class="chip">LLMs (Bedrock / Claude, Azure OpenAI)</span>
+        <span class="chip">RAG</span><span class="chip">Agentic / MCP</span><span class="chip">PyTorch</span>
+        <span class="chip">TensorFlow</span><span class="chip">Apache Iceberg / Lakehouse</span>
+        <span class="chip">Neo4j</span><span class="chip">Snowflake</span><span class="chip">Postgres</span>
+        <span class="chip">Kubernetes</span><span class="chip">AWS / GCP / Azure</span>
+        <span class="chip">Airflow</span><span class="chip">Grafana</span><span class="chip">MLOps</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="sec-eyebrow">Recognition</p>
+      <h2>Patents, writing &amp; education</h2>
+      <ul class="clean">
+        <li><strong>Patent (Allowed, USPTO):</strong> Generative AI-Based Multi-stage Composite Event Processing — co-inventor.</li>
+        <li><strong>Patent (Granted):</strong> US 9,065,952 B2 — determining the significance of performance issues in IT environments. <strong>Patent (Pending):</strong> ML-based detection of compromised cloud credentials.</li>
+        <li><strong>Writing:</strong> "FortiCNAPP AI Assist: Accelerating the Investigation and Remediation of Cloud Threats" (Fortinet Community blog).</li>
+        <li><strong>Education:</strong> MS in Analytics, Arizona State University (GPA 4.0, Beta Gamma Sigma); BTech in Electronics &amp; Communication Engineering, JNTU.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p>Open to connecting with engineers and leaders building AI for security, trust &amp; safety, and high-stakes production systems.</p>
+    <div class="foot-links">
+      <a href="mailto:aditya.samalla@asu.edu">aditya.samalla@asu.edu</a>
+      <a href="https://www.linkedin.com/in/adityasamalla">LinkedIn</a>
+      <a href="Aditya_Samalla_Resume_2026.pdf">Résumé (PDF)</a>
+    </div>
+    <p class="small">© 2026 Aditya Samalla</p>
+  </div>
+</footer>
+
+</body>
+</html>
