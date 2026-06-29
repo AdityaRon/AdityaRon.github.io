@@ -189,7 +189,7 @@
         </div>
         <div class="card">
           <h3>Composite Alerts engine <span class="k">Graph · ML</span></h3>
-          <p>Founding engineer and primary architect of the correlation engine: entity resolution collapses signals into canonical entities, then an <b>ephemeral Neo4j graph</b> correlates <span class="stat">400+</span> detections across <span class="stat">140+</span> MITRE ATT&amp;CK techniques — cloud, host, container, ML-anomaly, transfer-learned small-language-model detection (command-line &amp; hostname injection), and runtime vulnerable-activity (RiskWatch) signals — into single high-fidelity incidents, cutting false positives <span class="stat">40%</span>.</p>
+          <p>Founding engineer and primary architect of the correlation engine: entity resolution collapses signals into canonical entities, then an <b>ephemeral Neo4j graph</b> correlates <span class="stat">400+</span> detections across <span class="stat">140+</span> MITRE ATT&amp;CK techniques — cloud, host, container, ML-anomaly, small-language-model, and runtime vulnerable-activity (RiskWatch) signals — into single high-fidelity incidents, cutting false positives <span class="stat">40%</span>.</p>
         </div>
         <div class="card">
           <h3>Lakehouse migration <span class="k">Spark · Iceberg</span></h3>
@@ -198,6 +198,10 @@
         <div class="card">
           <h3>LLMOps &amp; AI security <span class="k">Eval · Red-team</span></h3>
           <p>Built the practice that keeps GenAI trustworthy: an LLM-as-judge evaluation harness, adversarial red-teaming (<span class="stat">5,000+</span> prompts), production SLOs, and per-request cost/latency observability — plus AI-threat detection policies and a reusable AI platform service other teams build on.</p>
+        </div>
+        <div class="card span2">
+          <h3>Detection models <span class="k">SLM · Transfer learning</span></h3>
+          <p>Co-designed the <b>small-language-model detectors</b> that feed the correlation engine — a command-line anomaly model and a hostname-injection model, both built on <b>fine-tuned transformer encoders</b> (transfer learning) and each pairing a <b>supervised classifier with unsupervised anomaly detection</b> to catch known <i>and</i> novel attacks. They run as cheap, batchable models over high-volume telemetry — adding detection coverage the rule-based detectors miss.</p>
         </div>
         <div class="card span2">
           <h3>Before that — a decade of production ML &amp; data science <span class="k">HPE · Salesforce</span></h3>
