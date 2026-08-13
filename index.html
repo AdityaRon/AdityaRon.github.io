@@ -204,6 +204,10 @@
           <p>Co-designed the <b>small-language-model detectors</b> that feed the correlation engine — a command-line anomaly model and a hostname-injection model, both built on <b>fine-tuned transformer encoders</b> (transfer learning) and each pairing a <b>supervised classifier with unsupervised anomaly detection</b> to catch known <i>and</i> novel attacks. I also own a wider fleet of <b>10+ statistical and ML detectors</b> (GMM, Isolation Forest, ARIMA, NER + gradient boosting) across cloud, host, and identity telemetry, plus the <b>human-in-the-loop alert-scoring loop</b> behind Composite Alerts — cheap, batchable signal that adds coverage the rule-based detectors miss.</p>
         </div>
         <div class="card span2">
+          <h3>Data platform &amp; scale <span class="k">Streaming · Rust · Ingestion</span></h3>
+          <p>The detection fleet and correlation engine run on top of a large ingestion backbone: a host agent streaming <b>25+ types</b> of behavioral telemetry, carried over a <b>Kafka-protocol streaming pipeline</b> and decoded by a Rust-based ingestion service that <b>autoscales to hundreds of pods per region</b> — feeding both an hourly batch-analysis tier and a separate, <b>sub-15-minute near-real-time tier</b> for faster detection paths.</p>
+        </div>
+        <div class="card span2">
           <h3>Before that — a decade of production ML &amp; data science <span class="k">HPE · Salesforce</span></h3>
           <p>At <a href="https://www.hpe.com/us/en/solutions/infosight.html">HPE InfoSight</a> (HPE's AIOps platform): workload anomaly detection, a recommendation engine that auto-resolved <span class="stat">86%</span> of customer cases, cross-stack analytics across host / storage / network, and capacity forecasting &amp; sizing. At Salesforce / Tableau: subscription-churn forecasting (<span class="stat">−1.5%</span> churn) and NLP for product ideas, plus data pipelines for the <a href="https://www.tableau.com/blog/how-data-equity-hub-helps-organizations-use-data-fight-justice-and-equity">Tableau Data Equity Hub</a>.</p>
         </div>
